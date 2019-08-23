@@ -20,6 +20,11 @@ pipeline {
                     echo "aws_secret_access_id = ${AWS_SECRET_ACCESS_KEY}" >> ~/.aws/credentials
               """
               }
+            }
+          }
+        stage('Create EC2 Instance') {
+          steps {
+            ansiblePlaybook playbook: 'main.yaml', inventory: 'inventory'
       }
     }
   }
