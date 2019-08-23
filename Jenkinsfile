@@ -14,6 +14,7 @@ pipeline {
                     mkdir -p ~/.aws
                     echo "[default]" > ~/.aws/credentials
                     echo "[default]" > ~/.boto
+                    echo "aws_access_key_id = ${AWS_ACCESS_KEY_ID}" >> ~/.boto
               """
               }
       }
