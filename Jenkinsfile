@@ -12,6 +12,7 @@ pipeline {
               ]]) {
               sh """
                     mkdir -p ~/.aws
+                    echo "[default]" >~.aws/credentials
               """
               }
       }
