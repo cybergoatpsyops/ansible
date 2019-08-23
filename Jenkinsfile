@@ -13,6 +13,7 @@ pipeline {
               sh """
                     mkdir -p ~/.aws
                     echo "[default]" > ~/.aws/credentials
+                    echo "[default]" > ~/.boto
               """
               }
       }
